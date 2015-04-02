@@ -17,6 +17,7 @@
 		22A74C831AC402BC00C19BAC /* CorePartnerLibary.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C821AC402BC00C19BAC /* CorePartnerLibary.m */; };
 		22A74C871AC4096A00C19BAC /* PersonalInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C861AC4096A00C19BAC /* PersonalInfoVC.m */; };
 		22A74C8C1AC808C100C19BAC /* ClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C8B1AC808C100C19BAC /* ClassVC.m */; };
+		22A74DC21ACDB2A300C19BAC /* ClassInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -61,6 +62,8 @@
 		22A74C861AC4096A00C19BAC /* PersonalInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoVC.m; sourceTree = "<group>"; };
 		22A74C8A1AC808C100C19BAC /* ClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassVC.h; sourceTree = "<group>"; };
 		22A74C8B1AC808C100C19BAC /* ClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassVC.m; sourceTree = "<group>"; };
+		22A74DC01ACDB2A300C19BAC /* ClassInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfoModel.h; sourceTree = "<group>"; };
+		22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfoModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 			children = (
 				22A74C8A1AC808C100C19BAC /* ClassVC.h */,
 				22A74C8B1AC808C100C19BAC /* ClassVC.m */,
+				22A74DC01ACDB2A300C19BAC /* ClassInfoModel.h */,
+				22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */,
 			);
 			name = "Class Info";
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A74C641AC3FB8400C19BAC /* ViewController.m in Sources */,
+				22A74DC21ACDB2A300C19BAC /* ClassInfoModel.m in Sources */,
 				22A74C8C1AC808C100C19BAC /* ClassVC.m in Sources */,
 				22A74C611AC3FB8400C19BAC /* AppDelegate.m in Sources */,
 				22A74C831AC402BC00C19BAC /* CorePartnerLibary.m in Sources */,

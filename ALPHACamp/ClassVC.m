@@ -7,22 +7,34 @@
 //
 
 #import "ClassVC.h"
+#import "ClassInfoModel.h"
 
 @interface ClassVC() 
 @property (weak, nonatomic) IBOutlet UITableView *classTableView;
+@property (strong, nonatomic) ClassInfo *classInfo;
 @end
 
 @implementation ClassVC
 
+- (void)awakeFromNib
+{
+    self.classInfo = [[ClassInfo alloc] init];
+}
+
 - (void)viewDidLoad{
     _classTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    UIBarButtonItem *anotherClassButton = [[UIBarButtonItem alloc] initWithTitle:@"選擇課程" style:UIBarButtonItemStylePlain target:self action:@selector(toClassDetail)];
+    self.navigationItem.rightBarButtonItem = anotherClassButton;
+    //[anotherButton release];
+    
     
     NSLog(@"tableView did load");
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)toClassDetail
 {
-    NSLog(@"tableView will appear");
+    NSLog(@"to class detail");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -30,11 +42,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 2;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return @"IOS APP 開發工程師實戰營";
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    //if (section == 0) {
+        return 30;
+    //}
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Text Color & Background color
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    header.textLabel.textColor = [UIColor blackColor];
+    //[header.textLabel setTextColor:[UIColor blackColor]];
+    header.contentView.backgroundColor = [UIColor grayColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -50,7 +77,7 @@
         
     }
     
-    cell.textLabel.text = @"test";
+    cell.textLabel.text = self.classInfo.classes[indexPath.row];
     return cell;
 }
 

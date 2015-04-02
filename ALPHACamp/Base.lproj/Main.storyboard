@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Event-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="w8j-Ez-nvq"/>
+                    <tabBarItem key="tabBarItem" title="Event" image="event_tapbar" id="w8j-Ez-nvq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448" y="-321"/>
         </scene>
-        <!--Class-->
+        <!--ClassVC-->
         <scene sceneID="ZRM-LZ-olw">
             <objects>
                 <viewController id="5pv-MX-Ldg" customClass="ClassVC" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-qU-5c9">
-                                <rect key="frame" x="16" y="60" width="288" height="459"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5pv-MX-Ldg" id="B3Z-Pf-ILk"/>
@@ -48,19 +48,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KSs-IW-aWQ" firstAttribute="top" secondItem="jhK-qU-5c9" secondAttribute="bottom" id="32p-40-Jmf"/>
-                            <constraint firstItem="jhK-qU-5c9" firstAttribute="leading" secondItem="54n-6s-M7w" secondAttribute="leadingMargin" id="8JY-WS-JgV"/>
-                            <constraint firstItem="jhK-qU-5c9" firstAttribute="top" secondItem="eJ0-fH-QR2" secondAttribute="bottom" constant="40" id="A6H-SW-gFZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jhK-qU-5c9" secondAttribute="trailing" id="SPh-hs-rNf"/>
+                            <constraint firstItem="jhK-qU-5c9" firstAttribute="leading" secondItem="54n-6s-M7w" secondAttribute="leadingMargin" constant="-16" id="8JY-WS-JgV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jhK-qU-5c9" secondAttribute="trailing" constant="-16" id="SPh-hs-rNf"/>
+                            <constraint firstItem="jhK-qU-5c9" firstAttribute="top" secondItem="54n-6s-M7w" secondAttribute="topMargin" id="vyG-Vf-cKt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Class" image="classtoolBar" selectedImage="classtoolBar" id="Ucm-I6-4Gw"/>
+                    <navigationItem key="navigationItem" id="Zyw-eJ-1cf"/>
                     <connections>
                         <outlet property="classTableView" destination="jhK-qU-5c9" id="f6r-jH-s34"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muK-bV-xtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="315"/>
+            <point key="canvasLocation" x="818" y="315"/>
         </scene>
         <!--aboutAC-->
         <scene sceneID="mhO-sC-u3e">
@@ -74,15 +74,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2FK-Dz-b9f">
-                                <rect key="frame" x="56" y="48" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2FK-Dz-b9f">
+                                <rect key="frame" x="60" y="50" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0BK-Wi-3li"/>
                                     <constraint firstAttribute="height" constant="200" id="pch-Me-fxf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHi-Mc-YMC">
-                                <rect key="frame" x="56" y="277" width="200" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHi-Mc-YMC">
+                                <rect key="frame" x="60" y="280" width="43" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,8 +109,8 @@
                                     <action selector="previousButton:" destination="dfs-Dy-F6R" eventType="touchUpInside" id="PiL-K3-Oe2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="characterWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-SN-Q59">
-                                <rect key="frame" x="56" y="319" width="200" height="140"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="characterWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-SN-Q59">
+                                <rect key="frame" x="60" y="319" width="200" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="rY7-rx-pyz" secondAttribute="trailing" id="z27-uf-ks1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="aboutAC" image="aboutAlphaCamp" selectedImage="aboutAlphaCamp" id="ArK-PJ-WiG"/>
+                    <tabBarItem key="tabBarItem" title="aboutAC" image="aboutAlphaCamp" id="ArK-PJ-WiG"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="Mdv-SN-Q59" id="e2A-8D-obU"/>
                         <outlet property="nameLabel" destination="BHi-Mc-YMC" id="GiG-Dm-g8R"/>
@@ -156,7 +156,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="k2k-Fs-X9k"/>
-                        <segue destination="5pv-MX-Ldg" kind="relationship" relationship="viewControllers" id="HfT-Mn-mDM"/>
+                        <segue destination="YlK-kr-Jo9" kind="relationship" relationship="viewControllers" id="HfT-Mn-mDM"/>
                         <segue destination="dfs-Dy-F6R" kind="relationship" relationship="viewControllers" id="Zr9-lq-biQ"/>
                     </connections>
                 </tabBarController>
@@ -164,11 +164,31 @@
             </objects>
             <point key="canvasLocation" x="12" y="315"/>
         </scene>
+        <!--Class-->
+        <scene sceneID="fQG-5v-zUy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YlK-kr-Jo9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Class" image="classtoolBar" id="Ucm-I6-4Gw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GWq-wr-yIA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5pv-MX-Ldg" kind="relationship" relationship="rootViewController" id="ddc-II-yRj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTi-Jh-q8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="315"/>
+        </scene>
     </scenes>
     <resources>
         <image name="aboutAlphaCamp" width="30" height="30"/>
         <image name="back" width="44" height="44"/>
         <image name="classtoolBar" width="30" height="30"/>
+        <image name="event_tapbar" width="30" height="30"/>
         <image name="next" width="44" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
