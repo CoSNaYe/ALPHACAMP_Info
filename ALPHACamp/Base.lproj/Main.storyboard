@@ -254,6 +254,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="toPersonDetailButton:" destination="Gcs-g4-52w" eventType="touchUpInside" id="uv8-gN-9je"/>
                                     <segue destination="dfs-Dy-F6R" kind="push" identifier="toPersonalDetail" id="Auo-HR-SLP"/>
                                 </connections>
                             </button>
