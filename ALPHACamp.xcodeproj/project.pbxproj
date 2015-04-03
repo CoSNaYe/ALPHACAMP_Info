@@ -18,6 +18,7 @@
 		22A74C871AC4096A00C19BAC /* PersonalInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C861AC4096A00C19BAC /* PersonalInfoVC.m */; };
 		22A74C8C1AC808C100C19BAC /* ClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C8B1AC808C100C19BAC /* ClassVC.m */; };
 		22A74DC21ACDB2A300C19BAC /* ClassInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */; };
+		3C7E0E011ACECAF9002B198C /* PersonLandingPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E0E001ACECAF9002B198C /* PersonLandingPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -64,6 +65,8 @@
 		22A74C8B1AC808C100C19BAC /* ClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassVC.m; sourceTree = "<group>"; };
 		22A74DC01ACDB2A300C19BAC /* ClassInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfoModel.h; sourceTree = "<group>"; };
 		22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfoModel.m; sourceTree = "<group>"; };
+		3C7E0DFF1ACECAF9002B198C /* PersonLandingPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonLandingPage.h; sourceTree = "<group>"; };
+		3C7E0E001ACECAF9002B198C /* PersonLandingPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonLandingPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				22A74C821AC402BC00C19BAC /* CorePartnerLibary.m */,
 				22A74C851AC4096A00C19BAC /* PersonalInfoVC.h */,
 				22A74C861AC4096A00C19BAC /* PersonalInfoVC.m */,
+				3C7E0DFF1ACECAF9002B198C /* PersonLandingPage.h */,
+				3C7E0E001ACECAF9002B198C /* PersonLandingPage.m */,
 			);
 			name = "Personal Info";
 			path = ..;
@@ -276,6 +281,7 @@
 				22A74C831AC402BC00C19BAC /* CorePartnerLibary.m in Sources */,
 				22A74C5E1AC3FB8400C19BAC /* main.m in Sources */,
 				22A74C871AC4096A00C19BAC /* PersonalInfoVC.m in Sources */,
+				3C7E0E011ACECAF9002B198C /* PersonLandingPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
