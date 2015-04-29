@@ -10,4 +10,6 @@
 
 @interface ClassInfo : NSObject
 @property (strong, nonatomic) NSMutableArray *classes;
+
+- (void)fetchData;
 @end

@@ -15,6 +15,8 @@
 @end
 
 #define BaseURLString @"https://dojo.alphacamp.co"
+#define kToken @"auth_token"
+#define kUserID @"user_id"
 
 @implementation LoginViewController
 
@@ -55,10 +57,13 @@
             
             // store the auth_token into userDefaults
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setValue:@"6f688ed7acbb0320afc9a318711408c23f0e77e0" forKey:@"auth_token"];
-            [defaults synchronize];
             
-            NSLog(@"%@", defaults);
+            NSLog(@"%@", responseObject);
+            
+            //NSString *user_id = [responseObject objectForKey:kUserID];
+            
+            [defaults setValue:[responseObject objectForKey:kToken] forKey:kToken];
+            [defaults synchronize];
             
             // present the first tableBar
             UIViewController *mainVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mainTabBarController"];

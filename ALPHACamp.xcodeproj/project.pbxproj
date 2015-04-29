@@ -47,8 +47,8 @@
 
 /* Begin PBXFileReference section */
 		1CDD9FFD11A7C72D92AF763E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		2230ED661AF0E6E400144B0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		2230ED671AF0E6E400144B0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2230ED661AF0E6E400144B0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		2230ED671AF0E6E400144B0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		22A74C581AC3FB8400C19BAC /* ALPHACamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPHACamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A74C5C1AC3FB8400C19BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A74C5D1AC3FB8400C19BAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,8 +98,6 @@
 		22A74C4F1AC3FB8400C19BAC = {
 			isa = PBXGroup;
 			children = (
-				2230ED661AF0E6E400144B0F /* LoginViewController.h */,
-				2230ED671AF0E6E400144B0F /* LoginViewController.m */,
 				22A74C5A1AC3FB8400C19BAC /* ALPHACamp */,
 				22A74C741AC3FB8400C19BAC /* ALPHACampTests */,
 				22A74C591AC3FB8400C19BAC /* Products */,
@@ -120,6 +118,8 @@
 		22A74C5A1AC3FB8400C19BAC /* ALPHACamp */ = {
 			isa = PBXGroup;
 			children = (
+				2230ED661AF0E6E400144B0F /* LoginViewController.h */,
+				2230ED671AF0E6E400144B0F /* LoginViewController.m */,
 				22A74C621AC3FB8400C19BAC /* ViewController.h */,
 				22A74C631AC3FB8400C19BAC /* ViewController.m */,
 				22A74C651AC3FB8400C19BAC /* Main.storyboard */,

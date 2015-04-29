@@ -30,8 +30,7 @@
     self.navigationItem.rightBarButtonItem = anotherClassButton;
     //[anotherButton release];
     
-    
-    NSLog(@"tableView did load");
+    [self.classInfo fetchData];
 }
 
 - (void)toClassDetail
