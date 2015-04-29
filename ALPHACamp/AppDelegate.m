@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // check if user is logged in and had a token
+    if ( [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"] ) {
+        UIViewController *firstVC = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"mainTabBarController"];
+        self.window.rootViewController = firstVC;
+    }
+    
     return YES;
 }
 

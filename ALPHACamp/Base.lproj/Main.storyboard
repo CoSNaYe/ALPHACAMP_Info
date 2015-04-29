@@ -8,7 +8,7 @@
         <!--Event-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventMainPageVC" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -162,12 +162,12 @@
                                     <constraint firstAttribute="height" constant="30" id="B80-Na-w1j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YxW-Mm-9VK">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YxW-Mm-9VK">
                                 <rect key="frame" x="16" y="269" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-pt-HS0">
                                 <rect key="frame" x="105" y="329" width="111" height="30"/>
@@ -211,6 +211,10 @@
                             <constraint firstItem="YxW-Mm-9VK" firstAttribute="top" secondItem="sal-an-Sk4" secondAttribute="bottom" constant="16" id="xGV-4S-zfA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountTextField" destination="sal-an-Sk4" id="j9a-KX-egl"/>
+                        <outlet property="passwordTextField" destination="YxW-Mm-9VK" id="Vpu-9P-XSQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IE-4P-KVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +223,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gOQ-64-qdm">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hr3-2S-3yE" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="hr3-2S-3yE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="OZE-2V-ixf">

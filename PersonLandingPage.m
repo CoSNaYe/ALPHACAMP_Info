@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"person landing page load");
     [self setupUI];
 }
 
@@ -49,5 +48,4 @@
     //another way to set navigation bar image
     //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigationImage"]];
 }
-
 @end
