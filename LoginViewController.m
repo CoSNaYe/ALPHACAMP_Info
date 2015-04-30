@@ -58,8 +58,7 @@
             // store the auth_token into userDefaults
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             
-            NSLog(@"%@", responseObject);
-            
+            //NSLog(@"%@", responseObject);
             //NSString *user_id = [responseObject objectForKey:kUserID];
             
             [defaults setValue:[responseObject objectForKey:kToken] forKey:kToken];
@@ -75,7 +74,7 @@
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                 message:@"帳號/密碼錯誤"
                                                                delegate:nil
-                                                      cancelButtonTitle:@"Ok"
+                                                      cancelButtonTitle:@"OK"
                                                       otherButtonTitles:nil];
             [alertView show];
         }];

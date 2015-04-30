@@ -14,8 +14,6 @@
 @property (strong, nonatomic) ClassInfo *classInfo;
 @end
 
-
-
 @implementation ClassVC
 
 - (void)awakeFromNib
@@ -24,13 +22,32 @@
 }
 
 - (void)viewDidLoad{
-    _classTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    UIBarButtonItem *anotherClassButton = [[UIBarButtonItem alloc] initWithTitle:@"選擇課程" style:UIBarButtonItemStylePlain target:self action:@selector(toClassDetail)];
-    self.navigationItem.rightBarButtonItem = anotherClassButton;
-    //[anotherButton release];
+    [self setupUI];
     
     [self.classInfo fetchData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTable) name:kNOTIFICATION_CLASSINFO_FOUND object:nil];
+}
+
+- (void)setupUI
+{
+    // "select another class" button at right side
+    UIBarButtonItem *classBarButton = [[UIBarButtonItem alloc] initWithTitle:@"選擇課程" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
+    classBarButton.tintColor = [UIColor grayColor];
+    self.navigationItem.rightBarButtonItems = @[classBarButton];
+    
+    // setup footer view of tableView
+    _classTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+- (void)updateTable
+{
+    [self.classTableView reloadData];
+}
+
+ - (void)test
+{
+    NSLog(@"Another class button pressed");
 }
 
 - (void)toClassDetail
@@ -39,18 +56,18 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return [self.classInfo.classDownloadInfo[@"syllabus"] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return [self.classInfo.classDownloadInfo[@"syllabus"][section][@"lessons"] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"IOS APP 開發工程師實戰營";
+    return self.classInfo.classDownloadInfo[@"syllabus"][section][@"section"][@"name"];
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     //if (section == 0) {
         return 30;
     //}
@@ -62,23 +79,19 @@
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     header.textLabel.textColor = [UIColor blackColor];
     //[header.textLabel setTextColor:[UIColor blackColor]];
-    header.contentView.backgroundColor = [UIColor grayColor];
+    header.contentView.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString *cellIdentifier = @"classTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    if ( !cell ){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.textColor = [UIColor grayColor];
-    }else{
-        
-    }
+    cell.textLabel.text = self.classInfo.classDownloadInfo[@"syllabus"][indexPath.section][@"lessons"][indexPath.row][@"name"];
     
-    cell.textLabel.text = self.classInfo.classes[indexPath.row];
+//    cell.detailTextLabel.textColor = [UIColor grayColor];
+//    cell.detailTextLabel.text = self.classInfo.classDownloadInfo[@"syllabus"][indexPath.section][@"lessons"][indexPath.row][@"url"];
+
     return cell;
 }
 
