@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220283711AF253CA009E5D9C /* classesNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 220283701AF253CA009E5D9C /* classesNameModel.m */; };
+		220283741AF255B2009E5D9C /* ClassConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 220283731AF255B2009E5D9C /* ClassConstant.m */; };
 		2230ED681AF0E6E400144B0F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2230ED671AF0E6E400144B0F /* LoginViewController.m */; };
 		22A74C5E1AC3FB8400C19BAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C5D1AC3FB8400C19BAC /* main.m */; };
 		22A74C611AC3FB8400C19BAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C601AC3FB8400C19BAC /* AppDelegate.m */; };
@@ -47,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		1CDD9FFD11A7C72D92AF763E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2202836F1AF253CA009E5D9C /* classesNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = classesNameModel.h; path = ../classesNameModel.h; sourceTree = "<group>"; };
+		220283701AF253CA009E5D9C /* classesNameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = classesNameModel.m; path = ../classesNameModel.m; sourceTree = "<group>"; };
+		220283721AF254A3009E5D9C /* ClassConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClassConstants.h; path = ../ClassConstants.h; sourceTree = "<group>"; };
+		220283731AF255B2009E5D9C /* ClassConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassConstant.m; path = ../ClassConstant.m; sourceTree = "<group>"; };
 		2230ED661AF0E6E400144B0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		2230ED671AF0E6E400144B0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		22A74C581AC3FB8400C19BAC /* ALPHACamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPHACamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,10 +183,14 @@
 		22A74C891AC808A000C19BAC /* Class Info */ = {
 			isa = PBXGroup;
 			children = (
+				220283721AF254A3009E5D9C /* ClassConstants.h */,
+				220283731AF255B2009E5D9C /* ClassConstant.m */,
 				22A74C8A1AC808C100C19BAC /* ClassVC.h */,
 				22A74C8B1AC808C100C19BAC /* ClassVC.m */,
 				22A74DC01ACDB2A300C19BAC /* ClassInfoModel.h */,
 				22A74DC11ACDB2A300C19BAC /* ClassInfoModel.m */,
+				2202836F1AF253CA009E5D9C /* classesNameModel.h */,
+				220283701AF253CA009E5D9C /* classesNameModel.m */,
 			);
 			name = "Class Info";
 			sourceTree = "<group>";
@@ -254,6 +264,7 @@
 				TargetAttributes = {
 					22A74C571AC3FB8400C19BAC = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 8H7X36TF25;
 					};
 					22A74C701AC3FB8400C19BAC = {
 						CreatedOnToolsVersion = 6.2;
@@ -341,12 +352,14 @@
 				22A74C641AC3FB8400C19BAC /* ViewController.m in Sources */,
 				22A74DC21ACDB2A300C19BAC /* ClassInfoModel.m in Sources */,
 				22A74C8C1AC808C100C19BAC /* ClassVC.m in Sources */,
+				220283711AF253CA009E5D9C /* classesNameModel.m in Sources */,
 				22A74C611AC3FB8400C19BAC /* AppDelegate.m in Sources */,
 				22A74C831AC402BC00C19BAC /* CorePartnerLibary.m in Sources */,
 				2230ED681AF0E6E400144B0F /* LoginViewController.m in Sources */,
 				22A74C5E1AC3FB8400C19BAC /* main.m in Sources */,
 				22A74C871AC4096A00C19BAC /* PersonalInfoVC.m in Sources */,
 				3C7E0E011ACECAF9002B198C /* PersonLandingPage.m in Sources */,
+				220283741AF255B2009E5D9C /* ClassConstant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +482,10 @@
 			baseConfigurationReference = FCFF5C1AB2032955201E843A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -481,7 +497,10 @@
 			baseConfigurationReference = 1CDD9FFD11A7C72D92AF763E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

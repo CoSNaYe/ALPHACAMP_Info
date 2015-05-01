@@ -1,29 +1,31 @@
 //
-//  ClassInfoModel.m
+//  classesNameModel.m
 //  ALPHACamp
 //
-//  Created by 陳逸仁 on 4/3/15.
+//  Created by 陳逸仁 on 4/30/15.
 //  Copyright (c) 2015 ALPHACamp. All rights reserved.
 //
 
-#import "ClassInfoModel.h"
+#import "classesNameModel.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ClassConstants.h"
 
-#define BaseURLString @"https://dojo.alphacamp.co"
-@implementation ClassInfo
+//#define BaseURLString @"https://dojo.alphacamp.co"
+
+@implementation ClassesNameModel
 
 - (instancetype)init
 {
     self = [super init];
     
     if (self) {
-        _classDownloadInfo = [[NSDictionary alloc] init];
+        _classesName = [[NSDictionary alloc] init];
+        //[self getClassesName];
     }
     return self;
 }
 
-- (void)fetchDataWithCourseName:(NSString *)courseName
+- (void)getClassesName
 {
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:BaseURLString]];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -32,11 +34,9 @@
                                  @"auth_token" : [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"]};
     
     if ( manager.reachabilityManager ) {
-        NSString *detailAPIRoute = [NSString stringWithFormat:@"%@%@",detailCourseAPIroute,courseName];
-        
-        [manager GET:detailAPIRoute parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-            self.classDownloadInfo = [[NSDictionary alloc] initWithDictionary:responseObject];
-            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAIL_FOUND object:self];
+        [manager GET:@"/api/v1/courses" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+            self.classesName = [[NSDictionary alloc] initWithDictionary:responseObject];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_CLASSNAME_FOUND object:self];
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             NSLog(@"Class download error: %@", [error localizedDescription]);
@@ -46,7 +46,5 @@
             [alertView show];
         }];
     }
-
 }
-
 @end

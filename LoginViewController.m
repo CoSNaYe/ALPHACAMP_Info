@@ -70,7 +70,7 @@
             
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"%@", [error localizedDescription]);
+            NSLog(@"%@ %@", error,  [error localizedDescription]);
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                 message:@"帳號/密碼錯誤"
                                                                delegate:nil
