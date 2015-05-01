@@ -164,7 +164,7 @@
         <!--Login View Controller-->
         <scene sceneID="iX6-ww-jRW">
             <objects>
-                <viewController id="diL-Aq-ut9" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="diL-Aq-ut9" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csX-Rk-c4x"/>
                         <viewControllerLayoutGuide type="bottom" id="baN-VY-pec"/>
@@ -348,15 +348,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="dfs-Dy-F6R" kind="push" id="CYy-Zd-NxJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-aP-UX0">
-                                <rect key="frame" x="105" y="414" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutButton:" destination="Gcs-g4-52w" eventType="touchUpInside" id="TCz-cs-X3r"/>
                                 </connections>
                             </button>
                         </subviews>

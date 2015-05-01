@@ -10,6 +10,7 @@
 		220283711AF253CA009E5D9C /* classesNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 220283701AF253CA009E5D9C /* classesNameModel.m */; };
 		220283741AF255B2009E5D9C /* ClassConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 220283731AF255B2009E5D9C /* ClassConstant.m */; };
 		2230ED681AF0E6E400144B0F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2230ED671AF0E6E400144B0F /* LoginViewController.m */; };
+		225DB71F1AF366B8002EBDC9 /* generalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 225DB71E1AF366B8002EBDC9 /* generalConstant.m */; };
 		22A74C5E1AC3FB8400C19BAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C5D1AC3FB8400C19BAC /* main.m */; };
 		22A74C611AC3FB8400C19BAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C601AC3FB8400C19BAC /* AppDelegate.m */; };
 		22A74C641AC3FB8400C19BAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A74C631AC3FB8400C19BAC /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		220283731AF255B2009E5D9C /* ClassConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassConstant.m; path = ../ClassConstant.m; sourceTree = "<group>"; };
 		2230ED661AF0E6E400144B0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		2230ED671AF0E6E400144B0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		225DB71D1AF3666E002EBDC9 /* generalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = generalConstant.h; path = ../generalConstant.h; sourceTree = "<group>"; };
+		225DB71E1AF366B8002EBDC9 /* generalConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = generalConstant.m; sourceTree = "<group>"; };
 		22A74C581AC3FB8400C19BAC /* ALPHACamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPHACamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A74C5C1AC3FB8400C19BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A74C5D1AC3FB8400C19BAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 		22A74C4F1AC3FB8400C19BAC = {
 			isa = PBXGroup;
 			children = (
+				225DB71D1AF3666E002EBDC9 /* generalConstant.h */,
+				225DB71E1AF366B8002EBDC9 /* generalConstant.m */,
 				22A74C5A1AC3FB8400C19BAC /* ALPHACamp */,
 				22A74C741AC3FB8400C19BAC /* ALPHACampTests */,
 				22A74C591AC3FB8400C19BAC /* Products */,
@@ -357,6 +362,7 @@
 				22A74C831AC402BC00C19BAC /* CorePartnerLibary.m in Sources */,
 				2230ED681AF0E6E400144B0F /* LoginViewController.m in Sources */,
 				22A74C5E1AC3FB8400C19BAC /* main.m in Sources */,
+				225DB71F1AF366B8002EBDC9 /* generalConstant.m in Sources */,
 				22A74C871AC4096A00C19BAC /* PersonalInfoVC.m in Sources */,
 				3C7E0E011ACECAF9002B198C /* PersonLandingPage.m in Sources */,
 				220283741AF255B2009E5D9C /* ClassConstant.m in Sources */,

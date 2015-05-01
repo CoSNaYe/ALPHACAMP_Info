@@ -8,13 +8,13 @@
 
 #import "LoginViewController.h"
 #import <AFNetworking/AFNetworking.h>
+#import "generalConstant.h"
 
 @interface LoginViewController () <UITextFieldDelegate> //textField delegate for textFieldShouldReturn:textField: function
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @end
 
-#define BaseURLString @"https://dojo.alphacamp.co"
 #define kToken @"auth_token"
 #define kUserID @"user_id"
 
@@ -53,7 +53,7 @@
                                  @"password" : @"Superstar"};
     
     if (manager.reachabilityManager) {
-        [manager POST:@"/api/v1/login" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [manager POST:loginAPIroute parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
             
             // store the auth_token into userDefaults
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

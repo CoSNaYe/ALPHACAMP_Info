@@ -9,6 +9,7 @@
 #import "ClassInfoModel.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ClassConstants.h"
+#import "generalConstant.h"
 
 #define BaseURLString @"https://dojo.alphacamp.co"
 @implementation ClassInfo

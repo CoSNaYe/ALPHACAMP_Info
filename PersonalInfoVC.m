@@ -26,10 +26,6 @@
     [super viewDidLoad];
     [self updateUI];
     
-//    UIImage *itemImage = [UIImage imageNamed:@"aboutAlphaCamp"];
-//    UITabBarItem *theItem = [[UITabBarItem alloc] initWithTitle:@"about" image:itemImage tag:2];
-//    self.tabBarItem = theItem;
-    
     //add swipe gesture
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeNext)];
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipePrevious)];
@@ -52,11 +48,9 @@
 
 - (void)updateUI
 {
-    //NSLog(@"update");
     _personPic.image = [UIImage imageNamed: [self.corePartner.peoples[personIndex] objectForKey:@"image"]];
     _nameLabel.text = [NSString stringWithFormat:@"%@",[self.corePartner.peoples[personIndex] objectForKey:@"name"]];
     _descriptionLabel.text = [self.corePartner.peoples[personIndex] objectForKey:@"description"];
-    //NSLog(@"update finished");
 }
 
 - (CorePartnerLibary *)corePartner
